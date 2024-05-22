@@ -44,6 +44,7 @@ export default {
       let token = data.token;
       //   console.log(data);
       this.$store.commit("LOGIN_IN", token);
+      this.$router.replace("/");
     },
   },
 };
