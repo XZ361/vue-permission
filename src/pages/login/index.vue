@@ -41,7 +41,9 @@ export default {
     async login() {
       // 网络请求
       let data = await login(this.account);
-      console.log(data);
+      let token = data.token;
+      //   console.log(data);
+      this.$store.commit("LOGIN_IN", token);
     },
   },
 };
