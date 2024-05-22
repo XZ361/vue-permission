@@ -2,7 +2,7 @@
 import router from "./index";
 import store from "@/store";
 router.beforeEach((to, from, next) => {
-  if (!store.stte.UserToken) {
+  if (!store.state.UserToken) {
     // 说明用户未登录
     if (
       to.matched.length > 0 &&
@@ -18,3 +18,7 @@ router.beforeEach((to, from, next) => {
     next();
   }
 });
+//路由权限业务
+//1.定义好全部的路由地址
+// 2.通过用户不同，向后台请求不同的用户权限数据
+// 3.对用户权限作对比：请求的数据===全部的路由 取出相同的作为路由配置

@@ -4,7 +4,7 @@ import "./registerServiceWorker";
 import router from "./router";
 import store from "./store";
 import "./plugins/element.js";
-import "router/permission";
+import "@/router/permission";
 
 Vue.config.productionTip = false;
 

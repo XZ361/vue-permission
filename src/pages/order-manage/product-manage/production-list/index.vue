@@ -1,5 +1,7 @@
 <template>
-  <div></div>
+  <div>
+    <h2>生产列表</h2>
+  </div>
 </template>
 
 <script>

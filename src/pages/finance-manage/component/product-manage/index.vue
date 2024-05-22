@@ -1,5 +1,5 @@
 <template>
-  <div>产品管理</div>
+  <div>生产管理</div>
 </template>
 
 <script>
