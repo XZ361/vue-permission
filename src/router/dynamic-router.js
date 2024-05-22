@@ -28,7 +28,7 @@ const dynamicRoutes = [
         path: "list",
         component: OrderList,
         name: "order-list",
-        meat: {
+        meta: {
           name: "订单列表",
           icon: "icon-quit",
         },
@@ -37,7 +37,7 @@ const dynamicRoutes = [
         path: "product",
         component: ProductManage,
         name: "product-manage",
-        meat: {
+        meta: {
           name: "生产管理",
           icon: "icon-service",
         },
@@ -95,7 +95,7 @@ const dynamicRoutes = [
         path: "classify",
         component: GoodsClassify,
         name: "goods-classify",
-        meat: {
+        meta: {
           name: "产品分类",
           icon: "icon-product-manage",
         },
