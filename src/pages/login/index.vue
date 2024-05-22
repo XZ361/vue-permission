@@ -29,6 +29,7 @@
 </template>
 
 <script>
+import { login } from "../../api";
 export default {
   data() {
     return {
@@ -37,8 +38,10 @@ export default {
     };
   },
   methods: {
-    login() {
+    async login() {
       // 网络请求
+      let data = await login(this.account);
+      console.log(data);
     },
   },
 };
