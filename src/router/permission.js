@@ -15,7 +15,17 @@ router.beforeEach((to, from, next) => {
       });
     }
   } else {
-    next();
+    if (!store.state.permission.permissionList) {
+      store.dispatch("permission/getPermission").then(() => {
+        next({ path: to.path });
+      });
+    } else {
+      if (to.path !== "/login") {
+        next();
+      } else {
+        next(from.fullPath);
+      }
+    }
   }
 });
 //路由权限业务

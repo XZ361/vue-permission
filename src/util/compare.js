@@ -20,6 +20,7 @@ export function compareRoute(userRoutes = [], allRoutes = []) {
 }
 
 export function setDefaultRoute(routes) {
+  // console.log(routes);
   routes.forEach((v, i) => {
     if (v.children && v.children.length > 0) {
       v.redirect = { name: v.children[0].name };

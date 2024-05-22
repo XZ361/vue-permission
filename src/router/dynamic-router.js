@@ -1,12 +1,13 @@
 // 订单管理
 const Order = () => import("../pages/order-manage");
-const OrderList = () => import("../pages/order-manage/order-list");
+const OrderList = () => import("../pages/order-manage/order-list/index.vue");
 const ProductManage = () => import("../pages/order-manage/product-manage");
 const ProductionList = () =>
-  import("../pages/order-manage/product-manage/production-list");
+  import("../pages/order-manage/product-manage/production-list/index.vue");
 const ReviewManage = () =>
-  import("../pages/order-manage/product-manage/review-manage");
-const ReturnGoods = () => import("../pages/order-manage/return-goods");
+  import("../pages/order-manage/product-manage/review-manage/index.vue");
+const ReturnGoods = () =>
+  import("../pages/order-manage/return-goods/index.vue");
 
 // 产品管理
 const Goods = () => import("../pages/goods-manage");
@@ -56,7 +57,7 @@ const dynamicRoutes = [
             component: ReviewManage,
             name: "review-Manage",
             meta: {
-              name: "审核列表",
+              name: "审核管理",
               icon: "icon-finance-manage",
             },
           },
