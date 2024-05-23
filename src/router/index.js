@@ -36,7 +36,7 @@ export const DynamicRoutes = [
         path: "home",
         component: Home,
         name: "home",
-        meat: {
+        meta: {
           // 用来匹配规则
           name: "首页",
           icon: "icon-name",

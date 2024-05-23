@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h2>审核管理</h2>
+    <router-view class="content"></router-view>
   </div>
 </template>
 

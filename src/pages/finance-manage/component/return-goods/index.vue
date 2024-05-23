@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h2>审核管理</h2>
+    <h2>退货管理</h2>
   </div>
 </template>
 
