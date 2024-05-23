@@ -1,9 +1,19 @@
 <template>
-  <div>layout</div>
+  <div>
+    <mainContent> </mainContent>
+    <siderbarNav></siderbarNav>
+  </div>
 </template>
 
 <script>
-export default {};
+import mainContent from "./component/main";
+import siderbarNav from "./component/siderbar";
+export default {
+  components: {
+    siderbarNav,
+    mainContent,
+  },
+};
 </script>
 
 <style lang="scss" scoped></style>

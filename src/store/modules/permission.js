@@ -38,7 +38,7 @@ export default {
       setDefaultRoute(MainContainer);
       // 初始化路由
       let initialRoutes = router.options.routes;
-      router.addRoute(DynamicRoutes);
+      router.addRoutes(DynamicRoutes);
       commit("SET_PERMISSION", [...initialRoutes, ...DynamicRoutes]);
     },
   },
