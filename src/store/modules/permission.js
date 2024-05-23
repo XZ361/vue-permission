@@ -26,7 +26,7 @@ export default {
   actions: {
     async getPermission({ commit, state }) {
       let permissionList = await fetchPerssion();
-      // console.log(permissionList);
+      console.log(permissionList);
       // 筛选路由
       let resRoutes = compareRoute(permissionList, dynamicRoutes);
       let MainContainer = DynamicRoutes.find((v) => v.path === "");

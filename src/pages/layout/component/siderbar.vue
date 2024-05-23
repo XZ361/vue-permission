@@ -7,7 +7,7 @@
       text-color="#eee"
       active-text-color="#4dbcff"
     >
-      <DynamicMenu />
+      <DynamicMenu :menuList="siderbarMenu" />
     </el-menu>
   </div>
 </template>

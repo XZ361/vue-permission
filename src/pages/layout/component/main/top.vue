@@ -13,7 +13,7 @@
             </el-dropdown-menu>
           </el-dropdown>
         </div>
-        <div @click="logout">logout</div>
+        <!-- <div @click="logout">logout</div> -->
       </div>
     </aside>
   </div>

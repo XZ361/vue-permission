@@ -16,7 +16,7 @@ app.get("/login", (req, res) => {
 });
 app.get("/permission", (req, res) => {
   const user = url.parse(req.url, true).query.user;
-  if (user === "admin") {
+  if (user.search("admin") > -1) {
     res.send(adminPerssion);
   } else {
     res.send(vipPerssion);

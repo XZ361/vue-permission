@@ -1,23 +1,44 @@
 <template>
-  <div>
-    <el-aside width="200px" style="background-color: rgb(238, 241, 246)">
-      <el-menu :default-openeds="['1', '3']">
-        <el-submenu index="1">
-          <template slot="title"
-            ><i class="el-icon-message"></i>导航一</template
-          >
-          <el-menu-item-group>
-            <template slot="title">分组一</template>
-            <el-menu-item index="1-1">选项1</el-menu-item>
-          </el-menu-item-group>
-        </el-submenu>
-      </el-menu>
-    </el-aside>
+  <div class="container">
+    <template v-for="v in menuList">
+      <el-submenu
+        :index="v.name"
+        v-if="v.children && v.children.length > 0"
+        :key="v.name"
+      >
+        <template slot="title">
+          <i class="el-icon-message" :class="v.meta.icon"></i>
+          <span>{{ v.meta.name }}</span>
+        </template>
+        <el-menu-item-group>
+          <my-nav :menuList="v.children"></my-nav>
+        </el-menu-item-group>
+      </el-submenu>
+      <el-menu-item :index="v.name" @click="gotoRoute(v.name)" v-else>
+        <i class="el-icon-message" :class="v.meta.icon"></i>
+        <span>{{ v.meta.name }}</span>
+      </el-menu-item>
+    </template>
   </div>
 </template>
 
 <script>
-export default {};
+export default {
+  name: "my-nav",
+  props: {
+    menuList: {
+      type: Array,
+      default: function () {
+        return [];
+      },
+    },
+  },
+  methods: {
+    gotoRoute(name) {
+      this.$router.push({ name });
+    },
+  },
+};
 </script>
 
 <style lang="scss" scoped></style>
